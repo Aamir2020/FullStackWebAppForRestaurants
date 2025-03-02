@@ -4,12 +4,15 @@
     ViewBag.Title = "List of Restaurant Ingredients";
 }
 <h1>Ingredients</h1>
+<a asp-action="Create">Create New Ingredient</a>
+
 <table class="table">
     <thead>
         <tr>
             <th>
                 @Html.DisplayNameFor(model => model.Name)
             </th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
@@ -18,6 +21,11 @@
             <tr>
                 <td>
                     @Html.DisplayFor(modelItem => ingredient.Name)
+                </td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@ingredient.IngredientId">Details</a>
+                    <a asp-action="Edit" asp-route-id="@ingredient.IngredientId">Edit</a>
+                    <a asp-action="Delete" asp-route-id="@ingredient.IngredientId">Delete</a>
                 </td>
             </tr>
         }
