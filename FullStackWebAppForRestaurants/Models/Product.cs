@@ -7,6 +7,10 @@ namespace FullStackWebAppForRestaurants.Models
 {
     public class Product
     {
+        public Product()
+        {
+            ProductIngredients = new List<ProductIngredient>();
+        }
         public int ProductId { get; set; }
         public String? Name { get; set; }
         public decimal Price { get; set; }
