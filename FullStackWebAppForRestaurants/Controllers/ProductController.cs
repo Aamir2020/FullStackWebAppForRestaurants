@@ -2,6 +2,7 @@
 using FullStackWebAppForRestaurants.Models;
 using Microsoft.AspNetCore.Mvc;
 
+   
 namespace FullStackWebAppForRestaurants.Controllers
 {
     public class ProductController : Controller
