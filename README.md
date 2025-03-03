@@ -1,6 +1,6 @@
 # Full Stack Web Application For Restaurants
 
-A comprehensive full-stack web application built with ASP.NET MVC to streamline restaurant operations, offering features such as online ordering, menu management, and user authentication.
+A comprehensive full-stack web application built with ASP.NET Core MVC to streamline restaurant operations, offering features such as online ordering, menu management, and user authentication.
 
 ## Table of Contents
 
@@ -26,18 +26,16 @@ A comprehensive full-stack web application built with ASP.NET MVC to streamline 
 ## Technologies Used
 
 ### Frontend
-
-- ASP.NET MVC
+- HTML
+- CSS
 - Bootstrap
 
 ### Backend
-
-- ASP.NET MVC (C#)
-- Entity Framework
+- ASP.NET Core MVC (C#)
 - ASP.NET Identity
+- Entity Framework
 
 ### Database
-
 - SQL Server
 
 #### Entity Diagram
@@ -69,19 +67,19 @@ A comprehensive full-stack web application built with ASP.NET MVC to streamline 
 
 3. **Open the solution file**: Open `FullStackWebAppForRestaurants.sln` in Visual Studio.
 
-4. **Restore NuGet packages**: Go to `Tools > NuGet Package Manager > Manage NuGet Packages for Solution` and restore them manually if necessary.
+4. **Update database connection string**: Modify `appsettings.json` to match your SQL Server configuration.
 
-5. **Update database connection string**: Modify `appsettings.json` to match your SQL Server configuration.
-
-6. **Apply migrations and seed the database**:
-
+5. Run the database migrations to create the required tables:
    ```sh
-   Update-Database
+   dotnet ef database update
    ```
 
-7. **Run the application**: Press `F5` in Visual Studio or click `Start`.
+6. **Run the application**:
+   ```sh
+   dotnet run
+   ```
 
-8. **Access the application**: Navigate to `http://localhost:5000` (or the port specified in your launch settings).
+7. **Access the application**: Navigate to `http://localhost:7078` (or the port specified in your launch settings).
 
 ## Project Demo
 ![image](https://github.com/user-attachments/assets/8a06337f-ba8e-4597-87dd-1a3195d83be6)
